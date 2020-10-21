@@ -65,174 +65,18 @@
 
 -(IBAction)setNum:(id)sender
 {
-    UIButton *clickBtn = (UIButton *)sender;
+    
     
     if (opt == nil){
         lbResult.text = [NSString stringWithFormat:@"%d",num1];
-        if ([clickBtn.titleLabel.text isEqualToString:@"0"] == YES)
-        {
-           
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-            {
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,0];
-            }
-        }else if ([clickBtn.titleLabel.text isEqualToString:@"1"] == YES)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,1];
-                
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",1];
-        }else if ([clickBtn.titleLabel.text isEqualToString:@"2"] == YES)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,2];
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",2];
-        }
-        else if ([clickBtn.titleLabel.text isEqualToString:@"3"] == YES)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,3];
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",3];
-        }
-        else if ([clickBtn.titleLabel.text isEqualToString:@"4"] == YES)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,4];
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",4];
-        }
-        else if ([clickBtn.titleLabel.text isEqualToString:@"5"] == YES)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,5];
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",5];
-        }
-        else if ([clickBtn.titleLabel.text isEqualToString:@"6"] == YES)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,6];
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",6];
-        }
-        else if ([clickBtn.titleLabel.text isEqualToString:@"7"] == YES)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,7];
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",7];
-        }
-        else if ([clickBtn.titleLabel.text isEqualToString:@"8"] == YES)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,8];
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",8];
-        }
-        else if ([clickBtn.titleLabel.text isEqualToString:@"0"] == NO)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,9];
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",9];
-        }
+        [self setNumForamt:sender];
         
         num1 = [lbResult.text intValue];
         
     }else
     {
         
-        if ([clickBtn.titleLabel.text isEqualToString:@"0"] == YES)
-        {
-           
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-            {
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,0];
-            }
-        }else if ([clickBtn.titleLabel.text isEqualToString:@"1"] == YES)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,1];
-                
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",1];
-        }else if ([clickBtn.titleLabel.text isEqualToString:@"2"] == YES)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,2];
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",2];
-        }
-        else if ([clickBtn.titleLabel.text isEqualToString:@"3"] == YES)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,3];
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",3];
-        }
-        else if ([clickBtn.titleLabel.text isEqualToString:@"4"] == YES)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,4];
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",4];
-        }
-        else if ([clickBtn.titleLabel.text isEqualToString:@"5"] == YES)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,5];
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",5];
-        }
-        else if ([clickBtn.titleLabel.text isEqualToString:@"6"] == YES)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,6];
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",6];
-        }
-        else if ([clickBtn.titleLabel.text isEqualToString:@"7"] == YES)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,7];
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",7];
-        }
-        else if ([clickBtn.titleLabel.text isEqualToString:@"8"] == YES)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,8];
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",8];
-        }
-        else if ([clickBtn.titleLabel.text isEqualToString:@"0"] == NO)
-        {
-            
-            if ([lbResult.text isEqualToString:@"0"] == NO)
-                lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,9];
-            else
-                lbResult.text = [NSString stringWithFormat:@"%d",9];
-        }
+        [self setNumForamt:sender];
         
         NSArray *strs = [lbResult.text componentsSeparatedByString:opt];
         num2 = [[strs objectAtIndex:1] intValue];
@@ -334,6 +178,91 @@
                 lbResult.text = [NSString stringWithFormat:@"%d",num1];
             }
         }
+    }
+}
+
+-(void) setNumForamt:(id)sender;
+{
+    UIButton *clickBtn = (UIButton *)sender;
+    
+    if ([clickBtn.titleLabel.text isEqualToString:@"0"] == YES)
+    {
+       
+        if ([lbResult.text isEqualToString:@"0"] == NO)
+        {
+            lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,0];
+        }
+    }else if ([clickBtn.titleLabel.text isEqualToString:@"1"] == YES)
+    {
+        
+        if ([lbResult.text isEqualToString:@"0"] == NO)
+            lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,1];
+            
+        else
+            lbResult.text = [NSString stringWithFormat:@"%d",1];
+    }else if ([clickBtn.titleLabel.text isEqualToString:@"2"] == YES)
+    {
+        
+        if ([lbResult.text isEqualToString:@"0"] == NO)
+            lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,2];
+        else
+            lbResult.text = [NSString stringWithFormat:@"%d",2];
+    }
+    else if ([clickBtn.titleLabel.text isEqualToString:@"3"] == YES)
+    {
+        
+        if ([lbResult.text isEqualToString:@"0"] == NO)
+            lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,3];
+        else
+            lbResult.text = [NSString stringWithFormat:@"%d",3];
+    }
+    else if ([clickBtn.titleLabel.text isEqualToString:@"4"] == YES)
+    {
+        
+        if ([lbResult.text isEqualToString:@"0"] == NO)
+            lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,4];
+        else
+            lbResult.text = [NSString stringWithFormat:@"%d",4];
+    }
+    else if ([clickBtn.titleLabel.text isEqualToString:@"5"] == YES)
+    {
+        
+        if ([lbResult.text isEqualToString:@"0"] == NO)
+            lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,5];
+        else
+            lbResult.text = [NSString stringWithFormat:@"%d",5];
+    }
+    else if ([clickBtn.titleLabel.text isEqualToString:@"6"] == YES)
+    {
+        
+        if ([lbResult.text isEqualToString:@"0"] == NO)
+            lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,6];
+        else
+            lbResult.text = [NSString stringWithFormat:@"%d",6];
+    }
+    else if ([clickBtn.titleLabel.text isEqualToString:@"7"] == YES)
+    {
+        
+        if ([lbResult.text isEqualToString:@"0"] == NO)
+            lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,7];
+        else
+            lbResult.text = [NSString stringWithFormat:@"%d",7];
+    }
+    else if ([clickBtn.titleLabel.text isEqualToString:@"8"] == YES)
+    {
+        
+        if ([lbResult.text isEqualToString:@"0"] == NO)
+            lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,8];
+        else
+            lbResult.text = [NSString stringWithFormat:@"%d",8];
+    }
+    else if ([clickBtn.titleLabel.text isEqualToString:@"0"] == NO)
+    {
+        
+        if ([lbResult.text isEqualToString:@"0"] == NO)
+            lbResult.text = [NSString stringWithFormat:@"%@%d",lbResult.text,9];
+        else
+            lbResult.text = [NSString stringWithFormat:@"%d",9];
     }
 }
 
